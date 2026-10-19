@@ -455,7 +455,16 @@ Testing/
 .cache/
 
 # End baseignore function
-# DragonRuby
+# DragonRuby Patterns
+!dragonruby-httpd.exe
+!dragonruby-httpd.linux
+!dragonruby-httpd.macos
+!dragonruby-publish.exe
+!dragonruby-publish.linux
+!dragonruby-publish.macos
+!dragonruby.exe
+!dragonruby.linux
+!dragonruby.macos
 # dragonruby
 # dragonruby.exe
 # dragonruby-publish
@@ -468,3 +477,4 @@ Testing/
 /samples/
 /docs/
 # /.dragonruby/
+# End DragonRuby Patterns

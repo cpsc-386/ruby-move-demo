@@ -1,6 +1,52 @@
+* 7.23
+** [Bugfix] Game no longer displays a black screen regardless of zoom level of webpage.
+* 7.22
+** [Pro] [Android] Fixed version mismatch for libSDL.
+** [Samples] Complete overhaul of scroll view sample =samples/09_ui_controls/03_scroll_view=.
+   Sample app is now more real world (acceleration, multi input, touch enabled). More enhancements to come later.
+** [Bugfix] ~Geometry.rect_navigate~ no longer throws an exception if ~wrap_(x|y)~ is false and ~using:~ parameter is specified.
+** [Support] ~String.line_anchors~ accept either line count of array of strings and will return a tuple of [anchor, index] or [anchor, string].
+* 7.21
+** [Pro] [iOS] [Android] Fixed bug related to orientation defaults when ~orientation~ does not match ~orientation_android~ or ~orientation_ios~.
+** [Samples] Updated multi-platform/multi-orientation of Squares arcade app to use modern DR apis.
+** [OSS] Pinned SDL version that DragonRuby uses (along with any custom patches we've made) has been released as OSS
+   Repo location: https://github.com/DragonRuby/SDL
+* 7.20
+** [Pro] [iOS] Minimum deployment target for iOS bumped to 15.0 (Apple compliance).
+   libSDL and iOS binaries rebuilt to have a min sdk version of 15.0.
+* 7.19
+** [Pro] [iOS] Support added for Xcode 27, arm64 Simulators, and iPhone Duo.
+   Multi-orientation games will now boot up Device Hub and iPhone Duo simulator by default.
+** [Pro] [iOS] QOL enhancements made to iOS Wizards ~$wizards.ios.start~
+   - Better error handling.
+   - Ability to specify partial simulator name: ~$wizards.ios.start env: :sim, sim_name: "iPad"~.
+   - Entitlements updated to register all device orientations if you have a multi-orientation game.
+   - Universal icons now used in packaging.
+** [Pro] [Shaders] [Samples] Added shader sample app that shows how to create watter ripples.
+   Sample app location: =samples/14_shaders/05_ripple_effects=
+** [Support] Numeric#frame returns ~hold_for~ and ~repeat~ within the result Hash for easier referencing.
+** [Support] Updated default DragonRuby icons to be better centered.
+   Added high res DR logo that can be used as a splash screen if you want.
+** [Samples] Added sample app that shows how to create a scrolling texture
+   Sample app location: =samples/07_advanced_rendering/02_render_targets_scrolling_texture=
+** [Samples] Updated many to many collisions sample app to use modern DR apis.
+   Sample app location: =samples/09_performance/09_collision_limits_many_to_many= to use modern DR apis.
+** [Samples] Updated animation states sample app to use modern DR apis.
+   Sample app location: =samples/03_rendering_sprites/03_animation_states_3=
+** [Samples] Updateed in-game map editor sample app to use modern DR apis
+   Sample app location: =samples/99_genre_platformer/map_editor=
+* 7.18
+** [Pro] [Steam] If SteamOS is launched in Big Screen mode, game will also be set to full screen.
+** [Pro] [Shaders] Added ability to define uniforms.
+   Sample app location: ==samples/14_shaders/04_uniforms=
+** [Support] dragonruby-publish excludes errors directory when publishing.
+** [Support] dragonruby-publish warns about certification failure risk if game title contains "Demo" or "Lite"
+** [Bugfix] Fixed game pad registration scenario that would cause inputs.controller_* to point to the same controller.
+** [Bugfix] Emscripten index db no longer loses save data.
+** [Bugfix] Orientation changed event is only registered if game_metadata supports both portrait and landscape.
 * 7.17
 ** [Pro] [Android] Target SDK for Android bumped to API 36 (Google Play compliance).
-** [Sample] Updated =07_advanced_rendering_hd/06_multi_platform_multi_orientation= to use modern DR Apis.
+** [Sample] Updated =samples/07_advanced_rendering_hd/06_multi_platform_multi_orientation= to use modern DR Apis.
 * 7.16
 ** [Pro] [Shaders] Shaders early access has been released.
    We are in the experimental phase with shaders. Apis will break, there will be
