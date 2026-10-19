@@ -474,7 +474,7 @@ Testing/
 /tmp/
 /builds/
 /logs/
-/samples/
+#/samples/
 #/docs/
 # /.dragonruby/
 # End DragonRuby Patterns
